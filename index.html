@@ -8,19 +8,35 @@
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="card pokemon-card text-center">
-            <h2 id="pokemonName"></h2>
-            <div class="row row-cols-2">
-                <div class="col">
-                    <div class="pokemon-type-title">Normal</div>
-                    <div class="img-container">
-                        <img id="normalImage" src="">
+        <div class="container-fluid mt-3">
+            <div class="card pokemon-card text-center">
+                <h2 id="pokemonName"></h2>
+                <div class="row row-cols-2">
+                    <div class="col">
+                        <div class="pokemon-type-title">Normal</div>
+                        <div class="img-container">
+                            <img id="normalImage" src="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="pokemon-type-title">Shiny</div>
+                        <div class="img-container">
+                            <img id="shinyImage" src="" >
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="pokemon-type-title">Shiny</div>
-                    <div class="img-container">
-                        <img id="shinyImage" src="" >
+                <div class="text-start">
+                    <h4>Pokedex description</h4>
+                    <h5 id="pokedexDescription"></h5>
+                </div>
+                <hr>
+                <div class="text-start">
+                    <div class="row align-items-center">
+                        <div class="col-md-auto">
+                            <h4>Cry</h4>
+                        </div>
+                        <div class="col-md-auto">
+                            <audio id="cryAudio" controls src="https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/1.ogg"></audio></div>
                     </div>
                 </div>
             </div>
