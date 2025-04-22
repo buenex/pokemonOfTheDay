@@ -1,0 +1,51 @@
+body {
+    background: linear-gradient(to bottom, #f0f8ff, #e0f7fa);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    }
+
+    .pokemon-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 600px;
+    }
+
+    #pokemonName {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ffcb05;
+    color: #2a75bb;
+    padding: 20px;
+    margin: 0;
+    }
+
+    .pokemon-type-title {
+    background-color: #2a75bb;
+    color: white;
+    padding: 10px;
+    }
+
+    .img-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    }
+
+    .img-container img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+    }
+
+    .img-container img:hover {
+    transform: scale(1.05);
+    }
+
+    @media (max-width: 576px) {
+    #pokemonName {
+        font-size: 14px;
+    }
+    }
