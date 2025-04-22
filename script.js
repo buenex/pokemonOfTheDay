@@ -26,33 +26,35 @@ function getPokemonNumberForToday() {
     const today = new Date();
     const daysDiff = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
 
-    if (daysDiff >= 1025) return null; 
+    const index = daysDiff % 1025;
 
     const numbers = Array.from({ length: 1025 }, (_, i) => i + 1);
     seededShuffle(numbers, 123456);
 
-    return numbers[daysDiff];
+    return numbers[index];
 }
 
-var numbers = []
-for (var i=0; i<32;i++){
-    for (var j=0; j<13;j++){
-        for (var k=2025; k<2029;k++){
-            numbers.push(parseInt(i + j + k) + k)
-        }
-    }
+function getPokedex(pokemonNumber) {
+    fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemonNumber}`)
+        .then(response => response.json())
+        .then(data => {
+            pokedexDescriptionElement.innerHTML = data.flavor_text_entries.filter((item)=>item.language.name =="en")[0].flavor_text
+        })
+        .catch(error => console.error("Erro:", error));
 }
 
-var numbers = []
-for (var i=0; i<32;i++){
-    for (var j=0; j<13;j++){
-        for (var k=2025; k<2029;k++){
-            numbers.push((parseInt(i.toString() + j.toString() + k.toString()) + k)%1025)
-        }
-    }
+function getPokemon(pokemonNumber) {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonNumber}`)
+        .then(response => response.json())
+        .then(data => {
+            normalImageElement.src=data.sprites.other["official-artwork"].front_default
+            shinyImageElement.src=data.sprites.other["official-artwork"].front_shiny
+            nameElement.innerHTML = `#${pokemonNumber} ${data.name[0].toUpperCase()+data.name.substring(1)}`;
+            cryAudioElement.src = data.cries.latest
+        })
+        .catch(error => console.error("Erro:", error));
 }
 
-console.log(numbers.sort(function(a, b) {
-    return a - b;
-  }))
-
+const pokemonNumber = getPokemonNumberForToday()
+getPokemon(pokemonNumber)
+getPokedex(pokemonNumber)
