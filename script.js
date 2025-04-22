@@ -3,12 +3,11 @@ var shinyImageElement = document.getElementById("shinyImage");
 var nameElement = document.getElementById("pokemonName");
 
 function pokemonNumberDay() {
-    // const today = new Date();
-    // const day = String(today.getDate()).padStart(2, '0');
-    // const month = String(today.getMonth() + 1).padStart(2, '0');
-    // const year = today.getFullYear();
-    // const uniqueSeed = parseInt(day + month + year) + year;
-    const uniqueSeed = parseInt(Math.random()*1025)
+    const today = new Date();
+    const day = String(today.getDate()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const year = today.getFullYear();
+    const uniqueSeed = parseInt(day + month + year) + year;
     const pokemonNum = (uniqueSeed % 1025) + 1;
 
     return pokemonNum;
