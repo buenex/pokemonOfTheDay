@@ -1,10 +1,29 @@
-# pokemonOfTheDay
-This project have the objective to get a random pokemon every each day, used to draw or to use as a mascot on banners or events, this project use a formula that doesnt repeat the pokemon and guarantee that all pokemons wiould be sorted.
+# 🐾 pokemonOfTheDay
 
-## POKE API
-For this project was used POKE API following the policy users. More about [POKE API](https://pokeapi.co/docs/v2)
+## 🎯 Descrição
 
-## Sugestions
-Please for sugestions , just let me know about it.
+O **pokemonOfTheDay** é um projeto divertido que tem como objetivo fornecer um Pokémon aleatório a cada dia! Ele é ideal para quem deseja:
 
->This project used a MIT license
+- **Criar desenhos** inspirados em Pokémon.
+- Usar como **mascote** em banners ou eventos.
+- Garantir que cada Pokémon apareça de forma **organizada e sem repetições** ao longo do tempo.
+
+## 🌐 POKE API
+
+Este projeto utiliza a [**POKE API**](https://pokeapi.co/) em conformidade com sua política de uso. A POKE API oferece um conjunto abrangente de dados sobre Pokémon, tornando-se uma ferramenta essencial para este projeto.
+
+## 💡 Sugestões
+
+Estamos sempre abertos a sugestões e feedback! Se você tiver ideias para melhorias ou novos recursos, por favor, entre em contato conosco.
+
+## 📜 Licença
+
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 📥 Instalação
+
+Para começar a usar o projeto, clone o repositório e instale as dependências necessárias:
+
+```bash
+git clone https://github.com/yourusername/pokemonOfTheDay.git
+cd pokemonOfTheDay
